@@ -1,0 +1,27 @@
+<%- include('page/header') %>
+
+<div class="container">
+  <h1 class="mt-4"><%= title %></h1>
+  <p>Esta es la página de <%= title %></p>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Lote</th>
+        <th>Denominación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% lotes.forEach(function(lote) { %>
+      <tr>
+        <td><%= lote.id %></td>
+        <td><%= lote.nombre %></td>
+        <td><%= lote.denominacion %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('page/footer') %>
